@@ -167,7 +167,7 @@ p {
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #f7c552;
 }
-bootstrap.min.css:5
+/* bootstrap.min.css:5 */
 .navbar-toggle {
     position: relative;
     float: right;
@@ -717,7 +717,7 @@ footer .location ul li {
 footer .location ul li:first-child {
 	margin-right: 15px;
 	padding-right: 15px;
-	border-right: 1px solid rgba(250, 250, 250, 0.1);
+	/*border-right: 1px solid rgba(250, 250, 250, 0.1);*/
 }
 
 footer .contact-info h4 {
