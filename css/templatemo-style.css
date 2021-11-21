@@ -271,6 +271,12 @@ p {
 	background-color: #f7c552;
 }
 
+#about .service-item .icon i {
+	font-size: 55px;
+	vertical-align: middle;
+	color: white;
+}
+
 #about .service-item h4 {
 	margin-bottom: 30px;
 	margin-top: 45px;
