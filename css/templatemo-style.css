@@ -295,6 +295,7 @@ p {
 #about .service-item p {
 	color: #fff;
 	margin-top: 30px;
+	height: 96px;
 }
 
 #about .service-item .primary-blue-button {
@@ -751,6 +752,10 @@ footer .contact-info ul li {
 footer .contact-info ul li em {
 	font-style: normal;
 	font-weight: 500;
+}
+
+footer .contact-info a {
+	color: #fff;
 }
 
 footer .connect-us h4 {
