@@ -1,46 +1,63 @@
-# Astro Starter Kit: Basics
+# Astrolify — Astro SaaS Starter
 
-```sh
-npm create astro@latest -- --template basics
+A premium SaaS landing page template built with [Astro](https://astro.build). Fully configurable from a single file, dark/light mode, CSS scroll-snap slider, and zero JS frameworks.
+
+## Stack
+
+- **Astro** — static-first framework with island architecture
+- **TypeScript** — type-safe config and components
+- **CSS custom properties** — design token system (`--ac-*`), no Tailwind dependency
+- **Vanilla TS** — progressive enhancement only (slider, theme switch, accordion, tabs)
+
+## Getting started
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open [http://localhost:4321](http://localhost:4321).
 
-## 🚀 Project Structure
+## Configuration
 
-Inside of your Astro project, you'll see the following folders and files:
+All content lives in one file:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```
+src/config/site.config.ts
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Edit brand, navigation, hero, stats, logo cloud, features, pricing, testimonials, FAQ, and footer sections without touching any component.
 
-## 🧞 Commands
+## Project structure
 
-All commands are run from the root of the project, from a terminal:
+```
+src/
+├── components/       # Astro components (one per section)
+├── config/
+│   └── site.config.ts  # ← edit this to customize the page
+├── data/
+│   └── icons.ts      # SVG icon paths (ui, features, social)
+├── layouts/
+│   └── Layout.astro  # HTML shell, theme init, SEO meta
+├── pages/
+│   └── index.astro   # Page composition
+├── styles/
+│   └── globals.css   # Design tokens and global utilities
+└── utils/            # Shared helpers
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Theme
 
-## 👀 Want to learn more?
+The site follows the OS color scheme preference by default (`prefers-color-scheme`). Users can override it with the toggle in the header. No flash on load — the theme is applied synchronously in the `<head>` before first paint.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Scripts
+
+| Command | Action |
+|---|---|
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Type-check and build to `./dist` |
+| `npm run preview` | Preview the production build locally |
+
+## License
+
+MIT
